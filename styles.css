@@ -1,0 +1,166 @@
+.box-container {
+    max-height: 800px;
+    max-width: 1000px;
+    display: grid;
+    grid-template-rows: 1fr .05fr 1fr;
+    font-size: 22px;
+    margin: auto;
+    }
+  
+  #white {
+    font-size: 5em;
+    background: #BCAAA4;
+    text-align: center;
+    pointer-events: none;
+  }
+  
+  #black {
+    font-size: 5em;
+    background: #5D4037;
+    text-align: center;
+  }
+  
+  #startInstructions {
+    font-size: .3em;
+    color: white;
+    position: relative;
+    bottom: 1.5em;
+  }
+  
+  #mobileIns {
+    display: none
+  }
+  
+  .controls {
+    background: linear-gradient(270deg, #AEB6BF, #AEB6BF 33%, #5D6D7E, #5D6D7E 67%, #2E4053, #2E4053 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  select {
+    border-radius: .5em;
+    font-size: 1em;
+    width: 4em;
+    position: relative;
+    left: 25%;  
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+    cursor: pointer;
+  }
+  /* Not using anymore
+  #minBtn {
+    background-color: #1B2631;
+    color: white;
+    border-radius: 20px;
+    font-family: ;
+    font-size: 18px;
+    width: 55px;
+    position: relative;
+    left: 20px;
+    cursor: pointer;
+  }
+  */
+  .reset-btn {
+    background-color: transparent;
+    font-family: "Asset";
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    text-align: center;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  option {
+    background-color: #5D6D7E;
+  }
+  
+  
+  /*first media query - mobile*/
+  @media (max-width:1080px){
+  .box-container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-rows: 1fr .05fr 1fr;
+    font-size: 22px;
+    margin: auto;
+    }
+  
+  #white {
+    font-size: 11.6em;
+    background: #BCAAA4;
+    text-align: center;
+  }
+  
+  #black {
+    font-size: 11.6em;
+    background: #5D4037;
+    transform: rotate(180deg);
+    text-align: center;
+  }
+  
+  #startInstructions {
+    font-size: .2em;
+    color: white;
+    position: relative;
+    top: -2em;
+  }
+    
+  #mobileIns {
+    font-size: .2em;
+    position: relative;
+    top: 2em;
+    display: block;
+    }
+  
+  .controls {
+    background: linear-gradient(270deg, #AEB6BF, #AEB6BF 33%, #5D6D7E, #5D6D7E 67%, #2E4053, #2E4053 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  select {
+    border-radius: .5em;
+    font-size: 2em;
+    width: 4em;
+    position: relative;
+    left: 25%;  
+    background-color: transparent;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    text-align: center;
+  }
+  /* Not using
+  #minBtn {
+    background-color: #1B2631;
+    color: white;
+    border-radius: 20px;
+    font-family: ;
+    font-size: 18px;
+    width: 55px;
+    position: relative;
+    left: 20px;
+    cursor: pointer;
+  }*/
+  
+  .reset-btn {
+    background-color: transparent;
+    font-family: "Asset";
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  option {
+    background-color: #5D6D7E;
+  }
+  };
+  
+  
+  
