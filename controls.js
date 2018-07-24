@@ -1,6 +1,6 @@
 // Variables
   // white div
-  const white = document.getElementById('white');
+const white = document.getElementById('white');
   // black div
 const black = document.getElementById('black');
   //control row elements
