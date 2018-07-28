@@ -1,12 +1,12 @@
 // Variables
   // white div
-const white = document.getElementById('white');
+const white = document.querySelector('.white');
   // black div
-const black = document.getElementById('black');
+const black = document.querySelector('.black');
   //control row elements
 const startTime = document.getElementById('times');
 /* const minBtn = document.getElementById('minBtn'); */
-const reset = document.querySelector('.reset-btn');
+const reset = document.getElementById('reset-btn');
   // randoms for functions
 var sec;
 var min;
@@ -107,9 +107,6 @@ const hide = function () {
 const show = function () {
   document.getElementById('startInstructions').style.display = "block";
 };
-  // hide mobile instructions
-const hideMobile = function () {  document.getElementById('mobileIns').style.display = "none";
-};
   // show mobile instructions
 const showMobile = function () {
   document.getElementById('mobileIns').style.display = 'block';
@@ -119,7 +116,6 @@ const blkMaster = function () {
   whtCountdown();
   blkStop();
   hide();
-  hideMobile();
   black.style.pointerEvents = "none";
   white.style.pointerEvents = "auto";
   times.style.pointerEvents = "none";
@@ -132,6 +128,15 @@ const whtMaster = function () {
   black.style.pointerEvents = "auto";
 };
 
+const keyboardControl = function () {
+  if(nWhtIntId == setInterval(whtTicker, 1000)) {
+    whtMaster();
+  }
+  else if(nBlkIntId == setInterval(blkTicker, 1000)) {
+    blkMaster();
+  }
+}
+
 
 
 //EVENTS
@@ -141,7 +146,8 @@ white.addEventListener('click', whtMaster);
 black.addEventListener('click', blkMaster);
   // picking time control
 startTime.addEventListener('change', setTime);
-  // alert: work in progress
-window.addEventListener('keypress', learning);
+  // keyboard controls
+window.addEventListener('keypress', blkMaster, once=true)
+window.addEventListener('keypress', keyboardControl);
   // reset 
 reset.addEventListener('click', resetClick);

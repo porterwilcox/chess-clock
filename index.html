@@ -5,17 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Chess Clock Ninja</title>
+  <title>Chess Clock</title>
   <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Asset' rel='stylesheet'>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
 </head>
 
 <body>
-  
-
-  <link href='https://fonts.googleapis.com/css?family=Asset' rel='stylesheet'>
-
-
-  <!-- The good stuff-->
+  <!-- First run
+  <!--   The good stuff
   <div class="box-container">
     <div id="black">
       <p>
@@ -33,7 +33,7 @@
       </select>
       <!-- for trying to 'click' fire
     <button id="minBtn">ok</button>
-    -->
+    
       <button class="reset-btn">Reset</button>
     </div>
     <div id="white">
@@ -42,7 +42,44 @@
         <span id=whtmin>5</span>:<span id="whtsec">00</span>
       </p>
     </div>
+  </div> -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 black-bg">
+        <p class="black">
+          <span id="blkmin">5</span>:
+          <span id='blksec'>00</span>
+        </p>
+        <div id="startInstructions">click to start</div>
+      </div>
+    </div>
+    <div class="row grey controls">
+      <div class="col-sm-3 offset-sm-3">       
+          <select id="times">
+            <option value="1">1 min </option>
+            <option value="3">3 min </option>
+            <option value="5" selected>5 min </option>
+            <option value="10">10 min </option>
+          </select>      
+      </div>
+      <div class="col-sm-3 offset-sm-2">
+          <button id='reset-btn'>Reset</button>       
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 white-bg">
+        <p class="white">
+          <span id="whtmin">5</span>:
+          <span id='whtsec'>00</span>
+        </p>
+      </div>
+    </div>
   </div>
+
+
+
+
   <script src="controls.js"></script>
 </body>
 
