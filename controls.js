@@ -107,10 +107,6 @@ const hide = function () {
 const show = function () {
   document.getElementById('startInstructions').style.display = "block";
 };
-  // show mobile instructions
-const showMobile = function () {
-  document.getElementById('mobileIns').style.display = 'block';
-};
   // black's function container function
 const blkMaster = function () {
   whtCountdown();
@@ -128,13 +124,18 @@ const whtMaster = function () {
   black.style.pointerEvents = "auto";
 };
 
-const keyboardControl = function () {
-  if(nWhtIntId == setInterval(whtTicker, 1000)) {
-    whtMaster();
-  }
-  else if(nBlkIntId == setInterval(blkTicker, 1000)) {
-    blkMaster();
-  }
+// under construction
+// const keyboardControl = function () {
+//   if(nWhtIntId == setInterval(whtTicker, 1000)) {
+//     whtMaster();
+//   }
+//   else if(nBlkIntId == setInterval(blkTicker, 1000)) {
+//     blkMaster();
+//   }
+// }
+
+const underConstruction = function () {
+  alert('This feature is under construction. Check back in. Thanks.')
 }
 
 
@@ -147,7 +148,6 @@ black.addEventListener('click', blkMaster);
   // picking time control
 startTime.addEventListener('change', setTime);
   // keyboard controls
-window.addEventListener('keypress', blkMaster, once=true)
-window.addEventListener('keypress', keyboardControl);
+window.addEventListener('keypress', underConstruction);
   // reset 
 reset.addEventListener('click', resetClick);
